@@ -87,7 +87,8 @@ if(Comando.indexOf("Local")>=0){ //Se a variavel Comando contem a palavra Local
     delay(1000);
     SIM800L.println("AT+HTTPPARA=\"CID\",1");
     delay(1000);
-    SIM800L.println("AT+HTTPPARA=\"URL\",\"http://www.portari.com.br/phpMQTT/exemplos/sim800l.php?posicaoatual=Obter_do_modulo_gps\"");
+    //Precisa ter um servidor Mosquitto configurado e conversando com a página PHP
+    SIM800L.println("AT+HTTPPARA=\"URL\",\"http://www.seusite.com/phpMQTT/exemplos/sim800l.php?posicaoatual=Obter_do_modulo_gps\"");
     delay(500);
     SIM800L.println("AT+HTTPACTION=0");
     delay(4500);
